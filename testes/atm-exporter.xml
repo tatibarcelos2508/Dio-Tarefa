@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10000</projectId>
+    <projectKey>DP</projectKey>
+    <exportDate>2024-03-25 17:03:42 UTC</exportDate>
+    <folders>
+        <folder fullPath="Listagem de produtos" index="2"/>
+    </folders>
+    <testCases>
+        <testCase id="144318001" key="DP-T5" paramType="TEST_DATA">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Tatiane Silva Barcelos</createdBy>
+            <createdOn>2024-03-09 18:04:15 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Listagem de produtos]]></folder>
+            <issues>
+                <issue>
+                    <key>DP-6</key>
+                    <summary><![CDATA[Como usuário deseja listar no sistema produtos por categorias]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Como usuário deseja listar no sistema produtos por categorias]]></name>
+            <objective><![CDATA[Verificar a funcionalidade de listagem de produtos por categoria]]></objective>
+            <owner>712020:81c4fc94-586f-48b5-891a-6000a0297838</owner>
+            <precondition><![CDATA[Cliente j&aacute; cadastrado em sistema]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper>
+                <testDataRow>
+                    <testDataColumns>
+                        <testData index="0">
+                            <name><![CDATA[login]]></name>
+                            <type><![CDATA[FREE_TEXT_INPUT]]></type>
+                            <value><![CDATA[username standard_user/ senha secret_sauce]]></value>
+                        </testData>
+                        <testData index="1">
+                            <name><![CDATA[categoria]]></name>
+                            <type><![CDATA[FREE_TEXT_INPUT]]></type>
+                            <value><![CDATA[Feminina]]></value>
+                        </testData>
+                    </testDataColumns>
+                </testDataRow>
+                <testDataRow>
+                    <testDataColumns>
+                        <testData index="0">
+                            <name><![CDATA[login]]></name>
+                            <type><![CDATA[FREE_TEXT_INPUT]]></type>
+                        </testData>
+                        <testData index="1">
+                            <name><![CDATA[categoria]]></name>
+                            <type><![CDATA[FREE_TEXT_INPUT]]></type>
+                        </testData>
+                    </testDataColumns>
+                </testDataRow>
+            </testDataWrapper>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[cliente tenha realizado o login com sucesso e esteja na tela de produtos]]></description>
+                        <expectedResult><![CDATA[clicar no bot&atilde;o &ldquo;categorias&rdquo;]]></expectedResult>
+                        <testData><![CDATA[<var>login</var>&nbsp;]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[<ul><li>selecionar a categoria desejada &ldquo;feminina, infantil, masculina, produtos esportivos&rdquo;</li></ul>]]></description>
+                        <expectedResult><![CDATA[Ser&atilde;o visualizados apenas os produtos daquela categoria selecionada]]></expectedResult>
+                        <testData><![CDATA[<var>categoria</var>&nbsp;]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
